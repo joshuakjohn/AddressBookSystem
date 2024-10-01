@@ -75,7 +75,10 @@ AddressBook.prototype.editContact = function (firstName, lastName, newDetails) {
     }
 };
 
-
 AddressBook.prototype.deleteContact = function (firstName, lastName) {
     this.contacts = this.contacts.filter(contact => !(contact.firstName === firstName && contact.lastName === lastName));
+};
+
+AddressBook.prototype.countContacts = function () {
+    return this.contacts.reduce((count) => count + 1, 0);
 };
