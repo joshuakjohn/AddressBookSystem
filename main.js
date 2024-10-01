@@ -98,3 +98,8 @@ AddressBook.prototype.addUniqueContact = function (contact) {
 AddressBook.prototype.searchByCityOrState = function (location) {
     return this.contacts.filter(contact => contact.city === location || contact.state === location);
 };
+
+AddressBook.prototype.viewByCityOrState = function (location) {
+    const contactsByLocation = this.searchByCityOrState(location);
+    contactsByLocation.forEach(contact => console.log(contact));
+};
