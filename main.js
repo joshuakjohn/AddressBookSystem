@@ -74,3 +74,8 @@ AddressBook.prototype.editContact = function (firstName, lastName, newDetails) {
         console.log('Contact not found');
     }
 };
+
+
+AddressBook.prototype.deleteContact = function (firstName, lastName) {
+    this.contacts = this.contacts.filter(contact => !(contact.firstName === firstName && contact.lastName === lastName));
+};
