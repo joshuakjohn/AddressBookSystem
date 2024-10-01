@@ -107,3 +107,8 @@ AddressBook.prototype.viewByCityOrState = function (location) {
 AddressBook.prototype.countByCityOrState = function (location) {
     return this.searchByCityOrState(location).length;
 };
+
+AddressBook.prototype.sortByName = function () {
+    this.contacts.sort((a, b) => a.firstName.localeCompare(b.firstName));
+    console.log(this.contacts);
+};
