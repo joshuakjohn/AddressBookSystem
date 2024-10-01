@@ -103,3 +103,7 @@ AddressBook.prototype.viewByCityOrState = function (location) {
     const contactsByLocation = this.searchByCityOrState(location);
     contactsByLocation.forEach(contact => console.log(contact));
 };
+
+AddressBook.prototype.countByCityOrState = function (location) {
+    return this.searchByCityOrState(location).length;
+};
