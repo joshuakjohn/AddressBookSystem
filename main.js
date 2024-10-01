@@ -94,3 +94,7 @@ AddressBook.prototype.addUniqueContact = function (contact) {
         console.log('Duplicate entry found');
     }
 };
+
+AddressBook.prototype.searchByCityOrState = function (location) {
+    return this.contacts.filter(contact => contact.city === location || contact.state === location);
+};
